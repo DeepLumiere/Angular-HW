@@ -1,0 +1,38 @@
+<h1 class="text-center my-4 fw-bold">Article Builder</h1>
+
+<div class="row justify-content-center">
+  <div class="col-lg-10 col-md-11 col-sm-12">
+    <div class="card bg-light shadow-lg p-lg-5 py-4 px-3 rounded-4 bg-dark">
+      <form #ArticleBuilder="ngForm" (ngSubmit)="save(ArticleBuilder)">
+
+        <div class="mb-4">
+          <label class="form-label fw-bold fs-5 text-light">Header</label>
+          <input class="form-control border-0 shadow-sm p-3" type="text" ngModel name="title" placeholder="Enter a captivating title...">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-bold fs-5 text-light">Abstract</label>
+          <textarea class="form-control border-0 shadow-sm p-3" rows="4" ngModel name="abstract" placeholder="Write a short summary..."></textarea>
+        </div>
+
+        <div id="passage-container">
+          <div class="mb-4">
+            <label class="form-label fw-bold fs-5 text-light">Passage 1</label>
+            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p1" placeholder="Write the first passage..."></textarea>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold fs-5 text-light">Passage 2</label>
+            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p2" placeholder="Write the second passage..."></textarea>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 mt-4">
+          <button type="submit" class="btn btn-success px-5 py-3 fw-bold shadow-lg rounded-pill">Submit</button>
+          <button type="reset" class="btn btn-outline-danger px-5 py-3 fw-bold shadow-lg rounded-pill">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
