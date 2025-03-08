@@ -6,24 +6,24 @@
       <form #ArticleBuilder="ngForm" (ngSubmit)="save(ArticleBuilder)">
 
         <div class="mb-4">
-          <label class="form-label fw-bold fs-5 text-light">Header</label>
-          <input class="form-control border-0 shadow-sm p-3" type="text" ngModel name="title" placeholder="Enter a captivating title...">
+          <label class="form-label fw-bold fs-5 text-light">Title</label>
+          <input class="form-control border-0 shadow-sm p-3" type="text" ngModel name="title" placeholder="Title...">
         </div>
 
         <div class="mb-4">
           <label class="form-label fw-bold fs-5 text-light">Abstract</label>
-          <textarea class="form-control border-0 shadow-sm p-3" rows="4" ngModel name="abstract" placeholder="Write a short summary..."></textarea>
+          <textarea class="form-control border-0 shadow-sm p-3" rows="4" ngModel name="abstract" placeholder="Abstract"></textarea>
         </div>
 
         <div id="passage-container">
           <div class="mb-4">
             <label class="form-label fw-bold fs-5 text-light">Passage 1</label>
-            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p1" placeholder="Write the first passage..."></textarea>
+            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p1" placeholder="Passage 1"></textarea>
           </div>
 
           <div class="mb-4">
             <label class="form-label fw-bold fs-5 text-light">Passage 2</label>
-            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p2" placeholder="Write the second passage..."></textarea>
+            <textarea class="form-control border-0 shadow-sm p-3" rows="5" ngModel name="p2" placeholder="Passage 2"></textarea>
           </div>
         </div>
 

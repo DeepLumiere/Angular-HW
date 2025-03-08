@@ -1,0 +1,24 @@
+<h1 class="text-center text-primary">Two-Way Binding</h1>
+
+<div class="container mt-4">
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Enter Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Enter your name">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Enter Age:</label>
+      <input type="number"  class="form-control" [(ngModel)]="age" name="age" placeholder="Age">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Enter Age:</label>
+      <input type="date"  class="form-control" [(ngModel)]="dob" name="dob" placeholder="MM/DD/YYYY">
+    </div>
+
+    <div class="alert alert-info">
+      <strong>Data:</strong> Name: {{ name }} Age: {{ age }} DOB : {{dob}}
+    </div>
+  </form>
+</div>

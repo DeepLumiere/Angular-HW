@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="mt-5">
+    <h3 class="text-center text-success">Team List</h3>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered text-center">
+        <thead class="table-striped table-dark text-white">
+        <tr>
+          <th>#</th>
+          <th>Team Name</th>
+          <th>Description</th>
+          <th>Lead</th>
+          <th>Member 1</th>
+          <th>Member 2</th>
+          <th>Member 3</th>
+          <th>Member 4</th>
+        </tr>
+        </thead>
+        <tbody>
+          @for (team of teamService.teamList; track $index) {
+            <tr>
+              <th>{{ $index + 1 }}</th>
+              <td>{{ team.tname }}</td>
+              <td>{{ team.desc }}</td>
+              <td>{{ team.lead }}</td>
+              <td>{{ team.mem1 }}</td>
+              <td>{{ team.mem2 }}</td>
+              <td>{{ team.mem3 }}</td>
+              <td>{{ team.mem4 }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

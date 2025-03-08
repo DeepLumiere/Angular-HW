@@ -1,0 +1,27 @@
+<h1 class="text-center text-primary">One-Way Binding</h1>
+
+<div class="container mt-4">
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Enter Standard:</label>
+      <input type="text" class="form-control" name="std" placeholder="Standard" #std>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Enter Age:</label>
+      <input type="number"  class="form-control"  name="slots" placeholder="Slot" #slots>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Pass/Fail:</label>
+      <p>{{status}}</p>
+    </div>
+    <div class = "mb-3">
+      <input type="submit" class="btn btn-success" (click)="save(std, slots)">
+    </div>
+    <div class="alert alert-info">
+      <strong>Data:</strong> Standard: {{ standard }} Slot: {{ slot }}
+    </div>
+
+  </form>
+</div>

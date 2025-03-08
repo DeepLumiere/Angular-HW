@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h2 class="text-center text-success mb-4">Create a Team</h2>
+    <form [formGroup]="TeamForm" (ngSubmit)="save()">
+      <div class="mb-3">
+        <label for="tname" class="form-label fw-bold">Team Name</label>
+        <input id="tname" type="text" class="form-control" formControlName="tname" placeholder="Enter team name">
+      </div>
+
+      <div class="mb-3">
+        <label for="desc" class="form-label fw-bold">Description</label>
+        <textarea id="desc" class="form-control" formControlName="desc" rows="3" placeholder="Enter description"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label fw-bold">Team Lead</label>
+          <input type="text" class="form-control" formControlName="lead" placeholder="Enter lead name">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label fw-bold">Member 1</label>
+          <input type="text" class="form-control" formControlName="mem1" placeholder="Enter member 1 name">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label fw-bold">Member 2</label>
+          <input type="text" class="form-control" formControlName="mem2" placeholder="Enter member 2 name">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label fw-bold">Member 3</label>
+          <input type="text" class="form-control" formControlName="mem3" placeholder="Enter member 3 name">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label fw-bold">Member 4</label>
+          <input type="text" class="form-control" formControlName="mem4" placeholder="Enter member 4 name">
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success px-4 py-2" [disabled]="TeamForm.invalid">Create Team</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="mt-5">
+    <h3 class="text-center text-success">Team List</h3>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered text-center">
+        <thead class="table-dark text-white">
+        <tr>
+          <th>#</th>
+          <th>Team Name</th>
+          <th>Description</th>
+          <th>Lead</th>
+          <th>Member 1</th>
+          <th>Member 2</th>
+          <th>Member 3</th>
+          <th>Member 4</th>
+        </tr>
+        </thead>
+        <tbody>
+          @for (team of TeamList; track $index) {
+            <tr>
+              <th>{{ $index + 1 }}</th>
+              <td>{{ team.tname }}</td>
+              <td>{{ team.desc }}</td>
+              <td>{{ team.lead }}</td>
+              <td>{{ team.mem1 }}</td>
+              <td>{{ team.mem2 }}</td>
+              <td>{{ team.mem3 }}</td>
+              <td>{{ team.mem4 }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
